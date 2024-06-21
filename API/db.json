@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "id": "5490",
+      "username": "Uday_116",
+      "password": "dhskjcas",
+      "email": "san@mail.com",
+      "phone": "374731749",
+      "image": "https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg"
+    },
+    {
+      "id": "4c55",
+      "username": "Uday_116",
+      "password": "sqdfgfhgh",
+      "email": "san@mail.com",
+      "phone": "2345678",
+      "image": "https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg"
+    },
+    {
+      "id": "228d",
+      "username": "abcd",
+      "password": "abcd",
+      "email": "san@mail.com",
+      "phone": "1234567",
+      "image": "https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg"
+    },
+    {
+      "id": "e69b",
+      "username": "harshapss",
+      "password": "sdfgbn",
+      "email": "san@mail.com",
+      "phone": "234567890",
+      "image": "https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg"
+    },
+    {
+      "id": "da92",
+      "username": "abcd",
+      "password": "asdf",
+      "email": "san@mail.com",
+      "phone": "46846532",
+      "image": "https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg"
+    },
+    {
+      "id": "01e2",
+      "username": "Uday_116",
+      "password": "asdc",
+      "email": "san@mail.com",
+      "mobile": "354987463",
+      "profileImage": "https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_640.png"
+    }
+  ]
+}
