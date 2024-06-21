@@ -9,7 +9,7 @@ function UserLoginStore({ children }) {
   //user login
   async function loginUser(userCred) {
     let res = await fetch(
-      `http://localhost:3000/users?username=${userCred.username}&password=${userCred.password}`
+      `https://user-api-k4of.onrender.com/users?username=${userCred.username}&password=${userCred.password}`
     );
     let usersList = await res.json();
     console.log("users list",usersList)
