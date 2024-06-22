@@ -1,6 +1,6 @@
 .header {
     background-color: var(--dark-cyan);
 }
-.header > h2 {
+.header > h1 {
     color: var(--light-cyan);
 }

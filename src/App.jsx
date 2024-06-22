@@ -6,7 +6,11 @@ import Register from "./components/register/Register";
 import Login from "./components/login/Login";
 import Aboutus from './components/aboutus/Aboutus'
 import UserProfile from './components/user-profile/UserProfile';
+import Products from './components/products/Products'
+import Cart from './components/cart/Cart'
 import RoutingError from "./RoutingError";
+import { Navigate } from "react-router-dom";
+import EditUser from "./components/edit-user/EditUser";
 
 function App() {
   const browserRouter = createBrowserRouter([
@@ -32,8 +36,26 @@ function App() {
           element: <Aboutus />,
         },
         {
+          path: "edit-user",
+          element: <EditUser />,
+        },
+        {
           path:'user-profile',
-          element:<UserProfile />
+          element:<UserProfile />,
+          children:[
+            {
+              path:'products',
+              element:<Products />
+            },
+            {
+              path:'cart',
+              element:<Cart />
+            },
+            {
+              path:'',
+              element:<Navigate to={'products'} />
+            }
+          ]
         }
       ],
     },

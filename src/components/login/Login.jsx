@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 function Login() {
 
-  let { loginUser,userLoginStatus}=useContext(userLoginContext)
+  let { loginUser,userLoginStatus,err}=useContext(userLoginContext)
   //const [userLoginErr, setUserLoginErr] = useState('')
   const navigate=useNavigate()
 
@@ -37,6 +37,9 @@ function Login() {
   return (
     <div>
       <p className="display-3 text-center">User Login</p>
+      {   
+          err?.length!==0&&<h2 className='text-danger text-center'>{err}</h2>
+      }
       {/* registration form */}
       <div className="row ">
         <div className="col-11 col-sm-10 col-md-6 mx-auto">

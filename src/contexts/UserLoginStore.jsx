@@ -5,11 +5,13 @@ function UserLoginStore({ children }) {
   //login user state
   let [currentUser, setCurrentUser] = useState(null);
   let [userLoginStatus,setUserLoginStatus]=useState(false)
+  let [err,setErr]=useState('')
 
   //user login
   async function loginUser(userCred) {
+    try{
     let res = await fetch(
-      `https://user-api-k4of.onrender.com/users?username=${userCred.username}&password=${userCred.password}`
+      `http://localhost:3000/users?username=${userCred.username}&password=${userCred.password}`
     );
     let usersList = await res.json();
     console.log("users list",usersList)
@@ -18,10 +20,15 @@ function UserLoginStore({ children }) {
       console.log("invalid user")
       setCurrentUser(null)
       setUserLoginStatus(false)
+      setErr('Inavalid Username or Password')
     } else {
       setCurrentUser(usersList[0]);
       setUserLoginStatus(true)
+      setErr('')
     }
+  } catch(error){
+    setErr(error.message)
+  }
   }
 
   //user logout
@@ -32,7 +39,7 @@ function UserLoginStore({ children }) {
   }
 
   return (
-    <userLoginContext.Provider value={{ loginUser,logoutUser,userLoginStatus }}>
+    <userLoginContext.Provider value={{ loginUser,logoutUser,userLoginStatus, err, currentUser, setCurrentUser }}>
       {children}
     </userLoginContext.Provider>
   );
